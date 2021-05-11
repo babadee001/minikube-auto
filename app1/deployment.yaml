@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: signavio-app1-deployment
+  labels:
+    app: signavio-app1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: signavio-app1
+  template:
+    metadata:
+      labels:
+        app: signavio-app1
+    spec:
+      # nodeSelector:
+      #   type: backend
+      containers:
+        - name: signavio-app1
+          image: signavio-app1
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 3000

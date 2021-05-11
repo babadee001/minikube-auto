@@ -1,0 +1,39 @@
+pipeline{
+    agent any
+    stages{
+
+      stage("run tests") {
+          when {
+              branch "test/*"
+          }
+          steps {
+              sh '''
+                  echo "No tests yet"
+              '''
+          }
+      }
+
+      stage("deploy") {
+          when {
+              anyOf {
+                  branch "main";
+                  branch "staging";
+              }
+          }
+          steps {
+              sh '''
+                  if [ $GIT_BRANCH = "staging" ] ; then
+                      export CONTAINER=staging
+                      export ENV=staging
+                      export PORT=3000
+                  elif [ $GIT_BRANCH = "main" ] ; then
+                      export CONTAINER=prod
+                      export ENV=production
+                      export PORT=3001
+                  fi
+                  docker-compose up --build --force-recreate --no-deps -d ${CONTAINER}
+              '''
+          }
+      }
+    }
+}

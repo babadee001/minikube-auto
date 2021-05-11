@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: reverse-app-service
+spec:
+  selector:
+    app: rm -rf rm -r
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000

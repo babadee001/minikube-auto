@@ -1,0 +1,33 @@
+{
+  "name": "signavio",
+  "version": "1.0.0",
+  "description": "A simple microservice",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/babadee001/signavio.git"
+  },
+  "keywords": [
+    "signavio",
+    "tech"
+  ],
+  "author": "temidayo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/babadee001/signavio/issues"
+  },
+  "homepage": "https://github.com/babadee001/signavio#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.10",
+    "@babel/node": "^7.13.10",
+    "@babel/preset-env": "^7.13.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
