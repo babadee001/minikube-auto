@@ -14,8 +14,6 @@ spec:
       labels:
         app: signavio-app1
     spec:
-      # nodeSelector:
-      #   type: backend
       containers:
         - name: signavio-app1
           image: signavio-app1

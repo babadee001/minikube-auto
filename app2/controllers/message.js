@@ -4,6 +4,7 @@ class Message {
   static reverseMessage(req, res) {
     const url = 'http://signavio-app1-service.default.svc.cluster.local';
 
+    // Get the message from the other service
     async function getMessage() {
       let response = await fetch(url);
       if (!response) {
@@ -16,6 +17,7 @@ class Message {
       }
   }
   
+  // Invert the message
   getMessage()
   .then(responseText => {
     const responseData = responseText.message.split("").reverse().join("")

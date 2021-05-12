@@ -10,9 +10,6 @@ app.use('/', MessageRouter);
 
 const port = process.env.PORT || 5000;
 
-app.get('/', (req, res) => {
-  res.send(`Welcome to scalac microservice. This is ${process.env.ENV}`);
-});
 
 app.get('*', (req, res) => {
   res.status(404).send({

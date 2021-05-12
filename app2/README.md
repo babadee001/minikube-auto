@@ -1,26 +1,17 @@
-# scalacmicro
+# signaviomicro
 
 
-This service gets jokes from `bash.org.pl`
+This service utilizes the first microservice (app1) and displays a fully reversed message text rendered.
+i.e it sends a GET request to app1 and reverse the `message` response.
 
 # Route
 
-`/jokes`
+`/`
 
 ```
-    http://<host>:<port>/jokes
+    http://<host>:<port>/
 ```
 
 
-# URLs
-
-production:  http://18.133.220.7:3001
-
-staging:   http://18.133.220.7:3000
-
-
-# Improvements
-
-`bash.org.pl/text` currently has issues and isn't accessible, implementing a web scrapper will improve this project.
 
 

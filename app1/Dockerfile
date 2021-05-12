@@ -1,15 +1,12 @@
-FROM node:14.14.0-alpine3.12
+FROM node:16-alpine as base
 
 RUN mkdir -p /home/signavio/app
-
-COPY . /home/signavio/app
-
+COPY index.js .babelrc package.json ./home/signavio/app/
 WORKDIR /home/signavio/app
+RUN npm install
 
+FROM node:16-alpine
+COPY --from=base /home/signavio/app /home/signavio/app
+WORKDIR /home/signavio/app
 EXPOSE 3000 
-
-ADD docker-entrypoint.sh /usr/local/bin/
-
-RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-
-ENTRYPOINT ["sh", "/usr/local/bin/docker-entrypoint.sh"]
+CMD npm start

@@ -1,5 +1,5 @@
 {
-  "name": "scalac",
+  "name": "signavio",
   "version": "1.0.0",
   "description": "A simple microservice",
   "main": "index.js",
@@ -9,18 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/babadee001/scalac.git"
+    "url": "git+https://github.com/babadee001/signavio.git"
   },
   "keywords": [
-    "scalac",
+    "signavio",
     "tech"
   ],
   "author": "temidayo",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/babadee001/scalac/issues"
+    "url": "https://github.com/babadee001/signavio/issues"
   },
-  "homepage": "https://github.com/babadee001/scalac#readme",
+  "homepage": "https://github.com/babadee001/signavio#readme",
   "devDependencies": {
     "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.10",
@@ -29,10 +29,6 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "html-to-json": "^0.6.0",
-    "html2json": "^1.0.2",
-    "install": "^0.13.0",
-    "node-fetch": "^2.6.1",
-    "npm": "^7.6.2"
+    "node-fetch": "^2.6.1"
   }
 }

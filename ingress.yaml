@@ -22,4 +22,4 @@ spec:
               service:
                 name: reverse-app-service
                 port:
-                  number: 2000
+                  number: 80
