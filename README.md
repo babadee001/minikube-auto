@@ -7,8 +7,8 @@ utilizes the first and displayes a fully reversed message text rendered dynamica
 
 # Requirements
 
-* Minikube on macOS
-* Kubectl
+* [Minikube on macOS](https://github.com/kubernetes/minikube)
+* [Kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-macos/)
 * 
 
 # Set up/Installation
