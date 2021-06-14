@@ -1,4 +1,4 @@
-# signaviocmicro
+# minikube-micro
 
 
 This repo setup a microservice on minikube using hyperkit as vm driver and automated with a simple script. 
